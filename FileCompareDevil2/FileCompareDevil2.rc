@@ -1,0 +1,401 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\FileCompareDevil2.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\FileCompareDevil2.ico"
+IDI_ICON_OPEN           ICON                    "res\\iconopen.ico"
+IDI_ICON_NULL           ICON                    "res\\iconnull.ico"
+IDI_ICON_NOTEQUAL       ICON                    "res\\iconnotequal.ico"
+IDI_ICON_LINE           ICON                    "res\\iconline.ico"
+IDI_ICON_EQUAL          ICON                    "res\\iconequal.ico"
+IDI_ICON_END            ICON                    "res\\iconend.ico"
+IDI_ICON_DELETED        ICON                    "res\\icondeleted.ico"
+IDI_ICON_CLOSE          ICON                    "res\\iconclose.ico"
+IDI_ICON_INCLUDE        ICON                    "res\\icon_equ.ico"
+IDI_ICON_TREE           ICON                    "res\\icon_tree.ico"
+IDI_ICON_ONE            ICON                    "res\\icon_one.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 FileCompareDevil2"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "FileCompareDevil2，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2013",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_FILECOMPAREDEVIL2_DIALOG DIALOGEX 0, 0, 719, 512
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "FileCompareDevil"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,7,192,313,288
+    PUSHBUTTON      "Export1",IDC_BTN_EXPORT1,73,174,30,14
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,341,192,313,288
+    CONTROL         "",IDC_LIST_EQUAL,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,321,192,19,288
+    PUSHBUTTON      "?=",IDC_BTN_EQUAL,321,174,18,14
+    PUSHBUTTON      "Save1",IDC_BTN_SAVE1,7,174,30,14
+    PUSHBUTTON      "Open1",IDC_BTN_OPEN1,40,174,30,14
+    PUSHBUTTON      "Export2",IDC_BTN_EXPORT2,405,174,30,14
+    PUSHBUTTON      "Save2",IDC_BTN_SAVE2,341,174,30,14
+    PUSHBUTTON      "Open2",IDC_BTN_OPEN2,373,174,30,14
+    PUSHBUTTON      "Refresh",IDC_BTN_REFRESH,671,67,41,39
+    CONTROL         "",IDC_TAB1,"SysTabControl32",0x0,7,7,648,160
+    PUSHBUTTON      "Log",IDC_BTN_LOGACTION,660,127,52,39
+    PUSHBUTTON      "Action",IDC_BTN_LOGACTION2,660,169,52,39
+    EDITTEXT        IDC_EDIT_RENAME,191,173,40,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_FILTER DIALOGEX 0, 0, 680, 149
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "包含(+)",IDC_STATIC,8,19,30,12
+    LTEXT           "排除(-)",IDC_STATIC,75,19,30,12
+    GROUPBOX        "文件",IDC_STATIC,4,2,133,144,WS_GROUP,WS_EX_TRANSPARENT
+    GROUPBOX        "文件夹",IDC_STATIC,146,2,133,144,WS_GROUP,WS_EX_TRANSPARENT
+    GROUPBOX        "类型",IDC_STATIC,288,2,133,144,WS_GROUP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_FILE_INCLUDE,8,32,58,109,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_EDIT_FILE_EXCEPT,75,32,58,109,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "包含(+)",IDC_STATIC,150,20,30,12
+    LTEXT           "排除(-)",IDC_STATIC,218,20,30,12
+    EDITTEXT        IDC_EDIT_FOLDER_INCLUDE,150,32,58,109,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_EDIT_FOLDER_EXCEPT,218,32,58,109,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "包含(+)",IDC_STATIC,292,19,30,12
+    LTEXT           "排除(-)",IDC_STATIC,359,19,30,12
+    EDITTEXT        IDC_EDIT_TYPE_INCLUDE,292,32,58,109,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_EDIT_TYPE_EXCEPT,359,32,58,109,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_GROUP
+    GROUPBOX        "其他",IDC_STATIC,430,2,243,117,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SIZE_MIN,481,31,86,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SIZE_MAX,580,31,86,15,ES_AUTOHSCROLL
+    LTEXT           "-",IDC_STATIC,572,32,8,15
+    LTEXT           "大小(K)",IDC_STATIC,434,33,25,15
+    LTEXT           "属性",IDC_STATIC,434,100,17,8
+    CONTROL         "存档",IDC_CHECK_ARCHIVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,481,100,32,10
+    CONTROL         "系统",IDC_CHECK_SYSTEM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,519,100,32,10
+    CONTROL         "隐藏",IDC_CHECK_HIDDEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,557,100,32,10
+    CONTROL         "只读",IDC_CHECK_READONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,595,100,32,10
+    LTEXT           "创建时间",IDC_STATIC,434,59,36,10
+    LTEXT           "-",IDC_STATIC,572,54,9,15
+    LTEXT           "-",IDC_STATIC,572,75,9,15
+    LTEXT           "修改时间",IDC_STATIC,434,80,36,10
+    CONTROL         "",IDC_DATETIME_CREATE_FROM,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_APPCANPARSE | 0x8,481,54,86,15
+    CONTROL         "",IDC_DATETIME_CREATE_TO,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_APPCANPARSE | WS_TABSTOP | 0x8,580,54,86,15
+    CONTROL         "",IDC_DATETIME_MODIFY_TO,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_APPCANPARSE | WS_TABSTOP | 0x8,580,75,86,15
+    CONTROL         "",IDC_DATETIME_MODIFY_FROM,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_APPCANPARSE | WS_TABSTOP | 0x8,481,75,86,15
+    PUSHBUTTON      "应用",IDC_BTN_OK,477,123,44,22
+    PUSHBUTTON      "放弃",IDC_BTN_CANCEL,533,123,44,22
+    PUSHBUTTON      "清空",IDC_BTN_CLEAR,589,123,44,22
+    CONTROL         "文件",IDC_RADIO_ALL2,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,484,15,43,11
+    CONTROL         "文件夹",IDC_RADIO_ALL3,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,523,15,43,11
+    CONTROL         "文件+文件夹",IDC_RADIO_ALL4,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,569,15,73,11
+    LTEXT           "类别",IDC_STATIC,434,16,25,15
+END
+
+IDD_DIALOG_FILELIST DIALOGEX 0, 0, 680, 149
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Add",IDC_BTN_ADD1,292,7,30,15
+    PUSHBUTTON      "Delete",IDC_BTN_DEL1,292,43,30,15
+    PUSHBUTTON      "Add",IDC_BTN_ADD2,636,7,30,15
+    PUSHBUTTON      "Delete",IDC_BTN_DEL2,636,43,30,15
+    PUSHBUTTON      "GO LIST",IDC_BTN_GO1,292,120,37,22
+    PUSHBUTTON      "GO LIST",IDC_BTN_GO2,636,120,37,22
+    PUSHBUTTON      "Clear",IDC_BTN_CLEAR1,292,25,30,15
+    PUSHBUTTON      "Clear",IDC_BTN_CLEAR2,636,25,30,15
+    CONTROL         "",IDC_LIST_PATH2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,342,7,287,135
+    CONTROL         "",IDC_LIST_PATH1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,9,7,277,135
+    PUSHBUTTON      "Save",IDC_BTN_SAVE1,292,61,30,15
+    PUSHBUTTON      "Load",IDC_BTN_LOAD1,292,79,30,15
+    PUSHBUTTON      "Save",IDC_BTN_SAVE2,636,61,30,15
+    PUSHBUTTON      "Load",IDC_BTN_LOAD2,636,79,30,15
+END
+
+IDD_DIALOG_COMPARE DIALOGEX 0, 0, 680, 150
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_TRANSPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "锁定滚动条",IDC_CK_LOCK_VSCROLL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,188,28,53,11
+    CONTROL         "全部",IDC_RADIO_ALL,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,189,43,43,11
+    CONTROL         "左右相同",IDC_RADIO_LRE,"Button",BS_AUTORADIOBUTTON,235,43,43,11
+    CONTROL         "左右不同",IDC_RADIO_LRN,"Button",BS_AUTORADIOBUTTON,281,43,43,11
+    CONTROL         "任何相同",IDC_RADIO_ANYE,"Button",BS_AUTORADIOBUTTON,325,43,43,11
+    CONTROL         "全部不同",IDC_RADIO_ALLN,"Button",BS_AUTORADIOBUTTON,371,43,43,11
+    CONTROL         "名字",IDC_CK_NAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,42,30,32,10
+    CONTROL         "大小(必须)",IDC_CK_SIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,42,56,53,10
+    CONTROL         "MD5(慢)",IDC_CK_MD5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,42,69,43,10
+    CONTROL         "类型",IDC_CK_TYPE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,42,43,32,10
+    CONTROL         "新增",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,261,57,32,10
+    CONTROL         "已删除",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,221,57,40,10
+    CONTROL         "待复制",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,293,58,40,10
+    CONTROL         "待删除",IDC_CHECK9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,333,58,40,10
+    CONTROL         "待移动",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,373,58,40,10
+    CONTROL         "普通",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,189,57,32,10
+END
+
+IDD_DIALOG_LOG DIALOGEX 0, 0, 660, 275
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "LOG & ACTION"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,544,254,50,14
+    PUSHBUTTON      "取消",IDCANCEL,603,254,50,14
+    CONTROL         "",IDC_LIST_LOG,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,7,7,646,239
+    PUSHBUTTON      "Save",IDC_BTN_SAVE,7,254,50,14
+    PUSHBUTTON      "Export",IDC_BTN_EXPORT,70,254,50,14
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 316, 180
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,159,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,159,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "FileCompareDevil2.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "FileCompareDevil2.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_FILECOMPAREDEVIL2_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 712
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 505
+    END
+
+    IDD_DIALOG_FILTER, DIALOG
+    BEGIN
+        RIGHTMARGIN, 679
+    END
+
+    IDD_DIALOG_LOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 653
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 268
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_LIST MENU 
+BEGIN
+    POPUP "LIST"
+    BEGIN
+        MENUITEM "新建目录",                        ID_LIST_MKDIR
+        MENUITEM "复制选中",                        ID_LIST_COPY
+        MENUITEM "剪切选中",                        ID_LIST_CUT
+        MENUITEM "粘贴已标记",                       ID_LIST_PASTE
+        MENUITEM "删除选中",                        ID_LIST_DELETE
+        MENUITEM "排除路径",                        ID_LIST_HIDEDIR
+        MENUITEM "忽略",                          ID_LIST_IGNORE
+        MENUITEM "忽略选中",                        ID_LIST_IGNORESEL
+        MENUITEM "重命名",                         ID_LIST_RENAME
+        MENUITEM SEPARATOR
+        MENUITEM "选中高亮",                        ID_LIST_SELECT
+        MENUITEM "全选",                          ID_LIST_SELECTALL
+        MENUITEM "反选",                          ID_LIST_SELECTINVERT
+        MENUITEM "展开高亮",                        ID_LIST_EXPAND
+        MENUITEM "折叠高亮",                        ID_LIST_FOLD
+        MENUITEM "展开子项",                        ID_LIST_EXPANDSON
+        MENUITEM "折叠子项",                        ID_LIST_FOLDSON
+        MENUITEM "全部展开",                        ID_LIST_EXPANDALL
+        MENUITEM "全部折叠",                        ID_LIST_FOLDALL
+        MENUITEM SEPARATOR
+        MENUITEM "刷新",                          ID_LIST_REFLASH
+        MENUITEM "属性",                          ID_LIST_PROPERTY
+        MENUITEM "复制路径",                        ID_LIST_COPYPATH
+        MENUITEM "打开文件夹",                       ID_LIST_OPENCONTAINS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_CHECKBOX     BITMAP                  "res\\checkbox.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 FileCompareDevil2(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\FileCompareDevil2.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
